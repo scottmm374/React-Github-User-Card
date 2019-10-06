@@ -18,9 +18,12 @@ const NewTitle = styled.h1`
 `;
 
 const NewNavLink = styled(NavLink)`
-text-decoration: none;
+    text-decoration: none;
     font-size: 2rem;
-    color: #22264b;   
+    color: black;
+    &:hover{
+        color: #e6cf8b;
+    }  
 `;
 
 const NewLinkDiv = styled.div`
