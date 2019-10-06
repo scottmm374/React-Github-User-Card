@@ -4,9 +4,9 @@ import styled from 'styled-components';
 const NewFooter = styled.footer`
 font-family: 'Barriecito', cursive;
 font-size : 1rem;
-background: #b56969;
+background: #b56969f7;
 padding: 1.5rem;
-margin-top: 800px;
+margin-top: 20%;
 `;
 
 const MainFooter = () => {
