@@ -8,7 +8,8 @@ import './App.css';
 
 
 class App extends Component {
-  constuctor() {
+  constructor(props) {
+    super(props);
     this.state = {
       userData: [] 
     };
@@ -26,26 +27,10 @@ class App extends Component {
     console.log("userData", this.state)
     return (
       <div className="App">
-        <MainHeader />
         <div>
-          {userData.map(user => (
-             <UserCard 
-             key={user.id}
-             name={user.name}
-             profileName={user.login}
-             avatar={user.avatar_url}
-             github={user.url}
-             location={user.location}
-             bio={user.bio}
-             followers={user.followers}
-             created={user.created_at}
-             repos={user.public_repos}
-
-             
-             />
-          ))}
-         
+        <MainHeader />
         </div>
+        <UserCard data={this.state.userData} />
         <section>
         <footer>
           <MainFooter />
@@ -60,3 +45,6 @@ class App extends Component {
 }
 
 export default App;
+
+
+
