@@ -31,8 +31,8 @@ class Followers extends Component {
                     key={user.id}
                     name={user.login}
                     profilePic={user.avatar_url}
-                    
-                    
+                    followers={user.followers_url}
+                    repos={user.repos_url}
                     />
            ))}
        </div>

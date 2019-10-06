@@ -39,8 +39,15 @@ function FollowerCard(props) {
         // <></>
         <NewCard key={props.key}>
             <Card.Content>
+            <Card.Header>
             <NewImg src={props.profilePic} />
                     <HeadOne>{props.name}</HeadOne>
+                    </Card.Header>
+                    <Card.Description className='main-card'>
+                        <Paragraph>{props.followers}</Paragraph>
+                        <Paragraph>{props.repos}</Paragraph>
+                        <Paragraph></Paragraph>
+                    </Card.Description>
             </Card.Content>
         </NewCard>
     )
