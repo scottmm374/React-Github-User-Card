@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
+import {Route} from 'react-router-dom'
 import axios from 'axios'
 import MainHeader from './components/MainHeader'
 import MainFooter from './components/MainFooter'
 import UserCard from './components/user/UserCard'
+import Followers from './components/followers/Followers'
 
 import './App.css';
 
@@ -30,7 +32,10 @@ class App extends Component {
         <div>
         <MainHeader />
         </div>
-        <UserCard data={this.state.userData} />
+        <Route exact path="/" render={props => (
+          <UserCard data={this.state.userData}/>)}/>
+        <Route path="/followers" component={Followers} />
+
         <section>
         <footer>
           <MainFooter />

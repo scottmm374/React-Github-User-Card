@@ -1,5 +1,6 @@
 import React from 'react'
-import { Card, Container } from 'semantic-ui-react'
+import { Card } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const NewCard = styled(Card)`
@@ -47,13 +48,10 @@ function UserCard(props) {
                 <Card.Description className='main-card'>
                     <Paragraph>Location: {props.data.location}</Paragraph>
                     <Paragraph>Bio: {props.data.bio}</Paragraph>
-                    <Paragraph>Github: {props.data.url}</Paragraph>
-                    <Paragraph>Followers:  {props.data.followers}</Paragraph>
+                   <Link to='/followers'><Paragraph>Followers:  {props.data.followers}</Paragraph></Link>
                     <Paragraph>Joned: {props.data.created_at}</Paragraph>
                 </Card.Description>
             </Card.Content>
-
-
         </NewCard>
 
 
