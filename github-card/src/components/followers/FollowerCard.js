@@ -31,18 +31,17 @@ const Paragraph = styled.p`
 function FollowerCard(props) {
     console.log("followercard", props)
     return (
-        // <></>
         <NewCard key={props.key}>
             <Card.Content>
-            <Card.Header>
-            <NewImg src={props.profilePic} />
+                <Card.Header>
+                    <NewImg src={props.profilePic} />
                     <HeadOne>{props.name}</HeadOne>
-                    </Card.Header>
-                    <Card.Description className='main-card'>
-                        <Paragraph>Followers: {props.followers.length}</Paragraph>
-                        <Paragraph>Repos: {props.repos.length}</Paragraph>
-                        <Paragraph></Paragraph>
-                    </Card.Description>
+                </Card.Header>
+                <Card.Description className='main-card'>
+                    <Paragraph>Followers: {props.followers.length}</Paragraph>
+                    <Paragraph>Repos: {props.repos.length}</Paragraph>
+                    <Paragraph></Paragraph>
+                </Card.Description>
             </Card.Content>
         </NewCard>
     )

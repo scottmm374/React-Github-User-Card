@@ -22,11 +22,11 @@ const MainFooter = () => {
     return (
         <NewFooter>
             <span><p> Created by Michelle Scott 2019</p>
-            <NewAnchor target="blank" href="https://www.freepik.com/free-photos-vectors/background">Background vector created by macrovector - www.freepik.com</NewAnchor>
+                <NewAnchor target="blank" href="https://www.freepik.com/free-photos-vectors/background">Background vector created by macrovector - www.freepik.com</NewAnchor>
             </span>
         </NewFooter>
     )
-   
+
 }
 
 export default MainFooter;

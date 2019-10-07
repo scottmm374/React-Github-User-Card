@@ -3,6 +3,7 @@ import { Card } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
+
 const NewCard = styled(Card)`
     background-color: #e6cf8bed;
     margin-left: 20%;
@@ -34,7 +35,6 @@ const Paragraph = styled.p`
 `;
 
 const NewLink = styled(Link)`
-    // text-decoration: none;
     color: black;
         &:hover{
             color: #b56969;
@@ -43,9 +43,8 @@ const NewLink = styled(Link)`
 
 
 function UserCard(props) {
-    console.log(props)
+    // console.log(props)
     return (
-
         <NewCard key={props.data.id}>
             <NewImg src={props.data.avatar_url} />
             <Card.Content>
@@ -56,13 +55,11 @@ function UserCard(props) {
                 <Card.Description className='main-card'>
                     <Paragraph>Location: {props.data.location}</Paragraph>
                     <Paragraph>Bio: {props.data.bio}</Paragraph>
-                   <NewLink to='/followers'><Paragraph>Followers:  {props.data.followers}</Paragraph></NewLink>
+                    <NewLink to='/followers'><Paragraph>Followers:  {props.data.followers}</Paragraph></NewLink>
                     <Paragraph>Joined: {props.data.created_at}</Paragraph>
                 </Card.Description>
             </Card.Content>
         </NewCard>
-
-
     )
 }
 

@@ -2,7 +2,7 @@
 import React from 'react'
 import { Header } from 'semantic-ui-react'
 import styled from 'styled-components';
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const NewHead = styled(Header)`
     background: #b56969f7;
@@ -34,17 +34,17 @@ const NewLinkDiv = styled.div`
 const MainHeader = () => {
     return (
         <>
-        <NewHead>
-         
-        <NewTitle>My Github!</NewTitle>
-        <NewLinkDiv>
-        <NewNavLink to="/">Home</NewNavLink>
-        <NewNavLink to="/followers">Followers</NewNavLink>
-        </NewLinkDiv>
-        </NewHead>
+            <NewHead>
+
+                <NewTitle>My Github!</NewTitle>
+                <NewLinkDiv>
+                    <NewNavLink to="/">Home</NewNavLink>
+                    <NewNavLink to="/followers">Followers</NewNavLink>
+                </NewLinkDiv>
+            </NewHead>
         </>
     )
-   
+
 }
 
 export default MainHeader;
