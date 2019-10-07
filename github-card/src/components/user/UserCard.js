@@ -57,6 +57,7 @@ function UserCard(props) {
                     <Paragraph>Bio: {props.data.bio}</Paragraph>
                     <NewLink to='/followers'><Paragraph>Followers:  {props.data.followers}</Paragraph></NewLink>
                     <Paragraph>Joined: {props.data.created_at}</Paragraph>
+                    <Paragraph>Repos: {props.data.public_repos}</Paragraph>
                 </Card.Description>
             </Card.Content>
         </NewCard>
