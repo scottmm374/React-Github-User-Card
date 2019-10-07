@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const NewCard = styled(Card)`
-    background-color: #e6cf8bf5;
+    background-color: #e6cf8bed;
     margin-left: 20%;
     margin-top: 15%;
     width: 60%;
@@ -33,6 +33,14 @@ const Paragraph = styled.p`
     margin-top: -16px;
 `;
 
+const NewLink = styled(Link)`
+    // text-decoration: none;
+    color: black;
+        &:hover{
+            color: #b56969;
+        }  
+`
+
 
 function UserCard(props) {
     console.log(props)
@@ -48,8 +56,8 @@ function UserCard(props) {
                 <Card.Description className='main-card'>
                     <Paragraph>Location: {props.data.location}</Paragraph>
                     <Paragraph>Bio: {props.data.bio}</Paragraph>
-                   <Link to='/followers'><Paragraph>Followers:  {props.data.followers}</Paragraph></Link>
-                    <Paragraph>Joned: {props.data.created_at}</Paragraph>
+                   <NewLink to='/followers'><Paragraph>Followers:  {props.data.followers}</Paragraph></NewLink>
+                    <Paragraph>Joined: {props.data.created_at}</Paragraph>
                 </Card.Description>
             </Card.Content>
         </NewCard>

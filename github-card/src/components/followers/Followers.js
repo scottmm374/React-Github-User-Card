@@ -17,7 +17,7 @@ class Followers extends Component {
     componentDidMount() {
       axios 
         .get('https://api.github.com/users/scottmm374/followers')
-        .then(res => this.setState({ followerData: res.data}))
+        .then(res => this.setState({ followerData: res.data.slice(1, 13)}))
         .catch(err => console.log(err))
     };
   

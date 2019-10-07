@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 
 const NewCard = styled(Card)`
-    background-color: #e6cf8bf5;
+    background-color: #e6cf8bed;
     margin-left: 20%;
     margin-top: 15%;
     width: 60%;
@@ -15,17 +15,12 @@ const NewCard = styled(Card)`
 const NewImg = styled.img`
     width: 25%;
     margin-top: 8%;
-    border-radius: 70px;
+    border-radius: 34px;
 `;
 
 const HeadOne = styled.h1`
     font-size: 3.5rem;
     font-family: 'Barriecito', cursive;
-`;
-
-const HeadFour = styled.h4`
-    font-size: 2.5rem;
-    margin-top: -45px;
 `;
 
 const Paragraph = styled.p`
@@ -44,8 +39,8 @@ function FollowerCard(props) {
                     <HeadOne>{props.name}</HeadOne>
                     </Card.Header>
                     <Card.Description className='main-card'>
-                        <Paragraph>{props.followers}</Paragraph>
-                        <Paragraph>{props.repos}</Paragraph>
+                        <Paragraph>Followers: {props.followers.length}</Paragraph>
+                        <Paragraph>Repos: {props.repos.length}</Paragraph>
                         <Paragraph></Paragraph>
                     </Card.Description>
             </Card.Content>
